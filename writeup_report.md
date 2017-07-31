@@ -32,7 +32,8 @@ I'm not using draw_lines() function. Instead of this I've created the new one ge
 <img src="writeup_images/step_4_right.jpg" width="480" alt="Step 4R" />
 5. Use Hough transform to detect line segments
 <img src="writeup_images/step_5.jpg" width="480" alt="Step 5" />
-6. As a result of step 5 we get a array of lines (start and end points, actually). By using start and end points we can create linear equation (y = k * x + b) for every line in this array. When I create linear equation for every line, I can calculate k-coefficient which determines angle of slope. After that I can filter array of lines by angle of slope. Lines in the left region of interest should have angle of slope between -40 and -28 degrees; in the right region of interest - between 28 and 40 degrees. We are not interested in lines go strictly vertical or horizontal. Now I can calculate 'mean' line of filtered lines
+6. As a result of step 5 we get a array of lines (start and end points, actually). By using start and end points we can create linear equation (y = k * x + b) for every line in this array. When I create linear equation for every line, I can calculate k-coefficient which determines angle of slope. After that I can filter array of lines by angle of slope. Lines in the left region of interest should have angle of slope between -40 and -28 degrees; in the right region of interest - between 28 and 40 degrees. We are not interested in lines go strictly vertical or horizontal. Now I can calculate 'mean' line of filtered lines.
+
 
 7. Draw left and right 'mean' lines from bottom to top of region of interest
 <img src="writeup_images/step_7.jpg" width="480" alt="Step 7" />
