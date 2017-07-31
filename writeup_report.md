@@ -21,7 +21,7 @@ The goals / steps of this project are the following:
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
 I'm not using draw_lines() function. Instead of this I've created the new one get_image_with_lines() function. My pipeline consisted of 8 steps: 
-1. Convert the images to grayscale <img src="writeup_images/step_1.jpg" width="480" alt="Step 1" />
+1. Convert the images to grayscale <img src="writeup_images/step_1.jpg" width="480" alt="Step 1" style="clear: both;" />
 2. Blur the images by using Gaussian blur <img src="writeup_images/step_2.jpg" width="480" alt="Step 2" />
 3. Get edges by using Canny <img src="writeup_images/step_3.jpg" width="480" alt="Step 3" />
 4. Get two regions of interest, for left and right line accordingly. I decided to process separately to increase velocity and accuracy <img src="writeup_images/step_4_left.jpg" width="480" alt="Step 4L" /><img src="writeup_images/step_4_right.jpg" width="480" alt="Step 4R" />
