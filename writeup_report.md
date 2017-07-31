@@ -14,7 +14,7 @@ The goals / steps of this project are the following:
 [image4L]: ./writeup_images/step_4_left.jpg "Step 4 left"
 [image4R]: ./writeup_images/step_4_right.jpg "Step 4 right"
 [image5]: ./writeup_images/step_5.jpg "Step 5"
-[image7]: ./writeup_images/step_6.jpg "Step 7"
+[image7]: ./writeup_images/step_7.jpg "Step 7"
 
 ### Reflection
 
@@ -22,18 +22,18 @@ The goals / steps of this project are the following:
 
 I'm not using draw_lines() function. Instead of this I've created the new one get_image_with_lines() function. My pipeline consisted of 8 steps: 
 1) Convert the images to grayscale
-![alt text][image1]
+![alt text][image1 = 600x]
 2) Blur the images by using Gaussian blur
-![alt text][image2]
+![alt text][image2 = 600x]
 3) Get edges by using Canny 
-![alt text][image3]
+![alt text][image3 = 600x]
 4) Get two regions of interest, for left and right line accordingly. I decided to process separately to increase velocity and accuracy
-![alt text][image4L] ![alt text][image4R]
+![alt text][image4L = 300x] ![alt text][image4R = 300x]
 5) Use Hough transform to detect line segments
-![alt text][image5]
+![alt text][image5 = 600x]
 6) As a result of step 5 we get a array of lines (start and end points, actually). By using start and end points we can create linear equation (y = k * x + b) for every line in this array. When I create linear equation for every line, I can calculate k-coefficient which determines angle of slope. After that I can filter array of lines by angle of slope. Lines in the left region of interest should have angle of slope between -40 and -28 degrees; in the right region of interest - between 28 and 40 degrees. We are not interested in lines go strictly vertical or horizontal. Now I can calculate 'mean' line of filtered lines.
 7) Draw left and right 'mean' lines from bottom to top of region of interest
-![alt text][image7]
+![alt text][image7 = 600x]
 8) Save current 'mean' coefficients. I need these coefficients to move line smoothly (without big jumps) between frames of video. 
 
 ### 2. Identify potential shortcomings with your current pipeline
